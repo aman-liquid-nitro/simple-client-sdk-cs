@@ -10,10 +10,10 @@ namespace LNG.SimpleSDKUnityPlugin.Examples
         [Header("Math Examples")]
         public int mathValueA = 10;
         public int mathValueB = 5;
-        
+
         [Header("String Examples")]
         public string testString = "Hello Unity!";
-        
+
         [Header("Random Examples")]
         public bool generateOnStart = true;
         public float minRandomRange = 0f;
@@ -28,10 +28,10 @@ namespace LNG.SimpleSDKUnityPlugin.Examples
             }
 
             Debug.Log("=== Unity Plugin System Examples ===");
-            
+
             DemonstrateMathOperations();
             DemonstrateStringOperations();
-            
+
             if (generateOnStart)
             {
                 DemonstrateRandomGeneration();
@@ -41,11 +41,11 @@ namespace LNG.SimpleSDKUnityPlugin.Examples
         private void DemonstrateMathOperations()
         {
             Debug.Log("--- Math Operations ---");
-            
-            int sum = Unity.BridgePlugin.PluginBridge.Add(mathValueA, mathValueB);
-            int difference = Unity.BridgePlugin.PluginBridge.Subtract(mathValueA, mathValueB);
-            float product = Unity.BridgePlugin.PluginBridge.Multiply(mathValueA, mathValueB);
-            float quotient = Unity.BridgePlugin.PluginBridge.Divide(mathValueA, mathValueB);
+
+            int sum = SimpleSdk.Unity.BridgePlugin.PluginBridge.Add(mathValueA, mathValueB);
+            int difference = SimpleSdk.Unity.BridgePlugin.PluginBridge.Subtract(mathValueA, mathValueB);
+            float product = SimpleSdk.Unity.BridgePlugin.PluginBridge.Multiply(mathValueA, mathValueB);
+            float quotient = SimpleSdk.Unity.BridgePlugin.PluginBridge.Divide(mathValueA, mathValueB);
 
             Debug.Log($"{mathValueA} + {mathValueB} = {sum}");
             Debug.Log($"{mathValueA} - {mathValueB} = {difference}");
@@ -56,10 +56,10 @@ namespace LNG.SimpleSDKUnityPlugin.Examples
         private void DemonstrateStringOperations()
         {
             Debug.Log("--- String Operations ---");
-            
-            string reversed = Unity.BridgePlugin.PluginBridge.ReverseString(testString);
-            string upperCase = Unity.BridgePlugin.PluginBridge.ToUpper(testString);
-            string lowerCase = Unity.BridgePlugin.PluginBridge.ToLower(testString);
+
+            string reversed = SimpleSdk.Unity.BridgePlugin.PluginBridge.ReverseString(testString);
+            string upperCase = SimpleSdk.Unity.BridgePlugin.PluginBridge.ToUpper(testString);
+            string lowerCase = SimpleSdk.Unity.BridgePlugin.PluginBridge.ToLower(testString);
 
             Debug.Log($"Original: {testString}");
             Debug.Log($"Reversed: {reversed}");
@@ -70,21 +70,17 @@ namespace LNG.SimpleSDKUnityPlugin.Examples
         private void DemonstrateRandomGeneration()
         {
             Debug.Log("--- Random Generation ---");
-            
+
             // Set seed for reproducible results
-            Unity.BridgePlugin.PluginBridge.SetRandomSeed(12345);
-            
-            int randomInt = Unity.BridgePlugin.PluginBridge.GetRandomInt((int)minRandomRange, (int)maxRandomRange);
-            float randomFloat = Unity.BridgePlugin.PluginBridge.GetRandomFloat(minRandomRange, maxRandomRange);
-            bool randomBool = Unity.BridgePlugin.PluginBridge.GetRandomBool();
-            Color randomColor = Unity.BridgePlugin.UnityExtensions.RandomColor();
-            Vector3 randomVector = Unity.BridgePlugin.UnityExtensions.RandomVector3(minRandomRange, maxRandomRange);
+            SimpleSdk.Unity.BridgePlugin.PluginBridge.SetRandomSeed(12345);
+
+            int randomInt = SimpleSdk.Unity.BridgePlugin.PluginBridge.GetRandomInt((int)minRandomRange, (int)maxRandomRange);
+            float randomFloat = SimpleSdk.Unity.BridgePlugin.PluginBridge.GetRandomFloat(minRandomRange, maxRandomRange);
+            bool randomBool = SimpleSdk.Unity.BridgePlugin.PluginBridge.GetRandomBool();
 
             Debug.Log($"Random Int: {randomInt}");
             Debug.Log($"Random Float: {randomFloat}");
             Debug.Log($"Random Bool: {randomBool}");
-            Debug.Log($"Random Color: {randomColor}");
-            Debug.Log($"Random Vector3: {randomVector}");
         }
 
         private void Update()
@@ -98,7 +94,7 @@ namespace LNG.SimpleSDKUnityPlugin.Examples
 
         private void GenerateRandomValue()
         {
-            float randomValue = Unity.BridgePlugin.PluginBridge.GetRandomFloat(minRandomRange, maxRandomRange);
+            float randomValue = SimpleSdk.Unity.BridgePlugin.PluginBridge.GetRandomFloat(minRandomRange, maxRandomRange);
             Debug.Log($"Generated Random Value: {randomValue}");
         }
     }
