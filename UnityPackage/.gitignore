@@ -1,0 +1,9 @@
+# Unity Package development
+*.unitypackage
+/temp/
+/Export/
+/TestBuilds/
+
+# Keep these - they're the final distributed DLLs
+!com.lng.simple_sdk_unity_plugin/Runtime/Internal.CorePlugin.dll
+!com.lng.simple_sdk_unity_plugin/Runtime/Unity.BridgePlugin.dll

@@ -1,0 +1,16 @@
+# C# Project specific
+/bin/
+/obj/
+*.user
+*.csproj.user
+*.csproj.FileListAbsolute.txt
+*.ncrunchproject
+*.suo
+*.cache
+*.vsp
+*.pidb
+*.userprefs
+*.DS_Store
+*~
+*.swp
+*.swo

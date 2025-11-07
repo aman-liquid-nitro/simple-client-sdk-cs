@@ -1,0 +1,206 @@
+# =======================================
+# Unity Plugin System GitIgnore
+# Covers: Core Plugin, Bridge Plugin, Unity Package
+# =======================================
+
+# =======================================
+# .NET Build Outputs
+# =======================================
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio cache/options directory
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build Results of an ATL project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# =======================================
+# Unity Specific
+# =======================================
+
+# Temporary generated files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# =======================================
+# Package Specific
+# =======================================
+
+# Package build outputs
+**/UnityPackage/com.lng.simple_sdk_unity_plugin/Runtime/*.dll
+**/UnityPackage/com.lng.simple_sdk_unity_plugin/Runtime/*.pdb
+!**/UnityPackage/com.lng.simple_sdk_unity_plugin/Runtime/*.dll.meta
+!**/UnityPackage/com.lng.simple_sdk_unity_plugin/Runtime/*.pdb.meta
+
+# Temporary package files
+**/UnityPackage/temp/
+**/UnityPackage/Export/
+
+# =======================================
+# OS Generated Files
+# =======================================
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# =======================================
+# Editor and IDE Files
+# =======================================
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# =======================================
+# Project Specific Patterns
+# =======================================
+
+# Keep these - they're part of the distributed package
+!**/UnityPackage/com.lng.simple_sdk_unity_plugin/Runtime/SimpleSdk.Core.dll
+!**/UnityPackage/com.lng.simple_sdk_unity_plugin/Runtime/SimpleSdk.Unity.BridgePlugin.dll
+
+# But ignore build outputs in source directories
+CorePlugin/bin/
+CorePlugin/obj/
+BridgePlugin/bin/
+BridgePlugin/obj/
+
+# NuGet packages
+*.nupkg
+**/packages/
+!**/packages/*.meta
+
+# =======================================
+# Unity Package Development
+# =======================================
+
+# Local test projects
+TestProjects/
+Samples~/  # Unity 2019.3+ local testing
+
+# Package validation
+ValidationExceptions.json
+
+# =======================================
+# Documentation Build Outputs
+# =======================================
+
+# Generated documentation
+docs/_site/
+docs/.jekyll-cache/
+*.chm
+
+# =======================================
+# Backup Files
+# =======================================
+
+# Backup files
+*.bak
+*.tmp
+*.backup
+*_Backup
+
+# =======================================
+# Logs
+# =======================================
+
+*.log
+*.log.*
+logs/
+
+# =======================================
+# Testing
+# =======================================
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+
+# =======================================
+# Git
+# =======================================
+
+# Git related
+*.orig
+*.patch
